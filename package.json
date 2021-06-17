@@ -1,0 +1,19 @@
+{
+    "name": "mini-electron-app",
+    "version": "0.0.1",
+    "main": "src/platform/Main.js",
+    "build": {
+        "files": [
+            "src"
+        ],
+        "asar": false
+    },
+    "devDependencies": {
+        "electron": "^13.1.2",
+        "electron-builder": "^22.11.7"
+    },
+    "scripts": {
+        "debugApp": "electron .",
+        "buildApp": "electron-builder"
+    }
+}

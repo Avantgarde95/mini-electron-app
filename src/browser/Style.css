@@ -1,0 +1,7 @@
+.App {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1rem;
+    border: 1px solid #aa55ff;
+    margin-bottom: 1rem;
+}
