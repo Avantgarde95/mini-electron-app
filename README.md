@@ -20,9 +20,17 @@ Super mini electron application
 
 -----
 
-우선 `npm install`을 실행하여 (Electron을 포함한) 라이브러리들을 설치해주세요.
+우선 `npm install`을 실행하여 필요한 라이브러리들을 설치해주세요. 아래의 라이브러리들이 설치됩니다.
 
-`npm run buildApp`을 실행하면 Electron이 웹사이트 코드를 가지고 데스크톱 앱과 설치 프로그램을 만들어줍니다. 인터넷에서 미리 빌드된 바이너리 파일들을 다운받고, 웹사이트, 데스크톱 코드, Chromium을 비틀어서 만든 무언가(?)를 묶어서 한 세트로 만들어줍니다.
+**[Electron](https://www.electronjs.org/)**
+  - Chromium과 Node.js를 이용하여 데스크톱 앱을 만들 수 있도록 하는 라이브러리입니다.
+  - 사용자가 웹사이트 코드와 데스크톱 코드를 제공하면, 내장된 Chromium 브라우저를 이용하여 웹사이트를 띄워주고, 웹사이트 쪽과 데스크톱 쪽이 통신할 수 있도록 도구를 제공하여 웹사이트 쪽에서 컴퓨터에 간접적으로 접근할 수 있도록 해줍니다. (이를 한 세트로 묶으면 마치 하나의 데스크톱 앱처럼 동작하게 됩니다.)
+  - 자세한 구조는 <https://velog.io/@ckstn0777/Electron-이해하기>를 참고해주세요.
+
+**[electron-builder](https://github.com/electron-userland/electron-builder)**
+  - Electron 실행 파일과 우리의 코드들을 한 세트로 묶어주는 도구입니다.
+
+`npm run buildApp`을 실행하면 electron-builder가 웹사이트 코드를 가지고 데스크톱 앱과 설치 프로그램을 만들어줍니다. 인터넷에서 미리 빌드된 바이너리 파일들을 다운받고, 웹사이트, 데스크톱 코드, Chromium을 비틀어서 만든 무언가(?)를 묶어서 한 세트로 만들어줍니다.
 
 ![ElectronBuilder](https://raw.githubusercontent.com/Avantgarde95/mini-electron-app/master/image/ElectronBuilder.png)
 
@@ -40,7 +48,7 @@ Super mini electron application
 
 ![PackedFiles](https://raw.githubusercontent.com/Avantgarde95/mini-electron-app/master/image/PackedFiles.png)
 
-만약 "package.json"에서 `"asar": false`를 `"asar": true`로 수정하고 다시 `npm run buildApp`을 실행하면, Electron이 아래와 같이 코드들을 한 덩어리로 뭉쳐서 한 파일("app.asar")로 만들어줍니다.
+만약 "package.json"에서 `"asar": false`를 `"asar": true`로 수정하고 다시 `npm run buildApp`을 실행하면, electron-builder가 아래와 같이 코드들을 한 덩어리로 뭉쳐서 한 파일("app.asar")로 만들어줍니다.
 
 ![AsarFile](https://raw.githubusercontent.com/Avantgarde95/mini-electron-app/master/image/AsarFile.png)
 
