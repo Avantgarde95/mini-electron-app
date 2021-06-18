@@ -13,7 +13,6 @@ Super mini electron application
 
 ### How to run
 -----
-우선 `npm install`을 실행하여 (Electron을 포함한) 라이브러리들을 설치하세요.
 
 웹 브라우저에서 "src/browser/Page.html"을 직접 열어서 웹사이트 코드를 직접 실행해볼 수 있습니다.
 
@@ -21,7 +20,9 @@ Super mini electron application
 
 -----
 
-`npm run buildApp`을 실행하면 Electron이 웹사이트 코드를 가지고 데스크톱 앱과 설치 프로그램을 만들어줍니다. 인터넷에서 미리 빌드된 바이너리 파일들을 다운받고, 웹사이트랑 데스크톱 코드를 묶어서 한 세트로 만들어줍니다.
+우선 `npm install`을 실행하여 (Electron을 포함한) 라이브러리들을 설치해주세요.
+
+`npm run buildApp`을 실행하면 Electron이 웹사이트 코드를 가지고 데스크톱 앱과 설치 프로그램을 만들어줍니다. 인터넷에서 미리 빌드된 바이너리 파일들을 다운받고, 웹사이트, 데스크톱 코드, Chromium을 비틀어서 만든 무언가(?)를 묶어서 한 세트로 만들어줍니다.
 
 ![ElectronBuilder](https://raw.githubusercontent.com/Avantgarde95/mini-electron-app/master/image/ElectronBuilder.png)
 
@@ -30,6 +31,10 @@ Super mini electron application
 ![AppFiles](https://raw.githubusercontent.com/Avantgarde95/mini-electron-app/master/image/AppFiles.png)
 
 ![PlatformApp](https://raw.githubusercontent.com/Avantgarde95/mini-electron-app/master/image/PlatformApp.png)
+
+"View" - "Toggle Developer Tools"를 눌러보면 아래와 같이 Chrome 디버거(Chrome에서 F12 키 누르면 나오는 것)가 나타납니다. 즉 우리의 데스크톱 앱이 내부적으로 Chrome(Chromium)을 사용한다는 것을 알 수 있습니다.
+
+![BrowserDebugger](https://raw.githubusercontent.com/Avantgarde95/mini-electron-app/master/image/BrowserDebugger.png)
 
 "resources" 폴더를 들어가 보면 웹사이트 코드 및 데스크톱 코드가 복사되어 있음을 알 수 있습니다. ("package.json"에서 데스크톱 앱에 첨부할 폴더나 파일들을 지정해줄 수 있습니다.)
 
