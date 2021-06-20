@@ -29,8 +29,9 @@ Super mini electron application
 
 **[electron-builder](https://github.com/electron-userland/electron-builder)**
   - Electron 실행 파일과 우리의 코드들을 한 세트로 묶어주는 도구입니다.
+  - Electron 기반 프로그램을 배포하려면 Electron 실행 파일, 웹사이트 코드, 데스크톱 코드를 [한데 묶어야 하는데](https://www.electronjs.org/docs/tutorial/application-distribution), 이 작업을 자동으로 해줍니다.
 
-`npm run buildApp`을 실행하면 electron-builder가 웹사이트 코드를 가지고 데스크톱 앱과 설치 프로그램을 만들어줍니다. 인터넷에서 미리 빌드된 바이너리 파일들을 다운받고, 웹사이트, 데스크톱 코드, Chromium을 비틀어서 만든 무언가(?)를 묶어서 한 세트로 만들어줍니다.
+`npm run buildApp`을 실행하면 electron-builder가 웹사이트 코드를 가지고 데스크톱 앱과 설치 프로그램을 만들어줍니다. 인터넷에서 미리 빌드된 Electron 실행 파일을 다운받고, 이를 웹사이트, 데스크톱 코드와 묶어서 한 세트로 만들어줍니다.
 
 ![ElectronBuilder](https://raw.githubusercontent.com/Avantgarde95/mini-electron-app/master/image/ElectronBuilder.png)
 
